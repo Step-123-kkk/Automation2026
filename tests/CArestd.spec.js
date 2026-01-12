@@ -29,9 +29,9 @@ test('Excel data based automation', async ({ page }) => {
       await page.getByText('HHL01-A, Herbert H. Landy').click();
       await page.getByRole('textbox', { name: 'Search Firm Name' }).click();
       await page.getByRole('textbox', { name: 'Search Firm Name' }).type(row.FirmName);
-      const locationAL = page.getByRole('textbox', { name: 'Sizing example input' }).first();
-      await locationAL.click();
-      await locationAL.type(row.Location);
+      const location = page.getByRole('textbox', { name: 'Sizing example input' }).first();
+      await location.click();
+      await locations.type(row.Location);
       await page.waitForTimeout(3000);
       await page.keyboard.press('ArrowDown');
       await page.keyboard.press('ArrowDown');
