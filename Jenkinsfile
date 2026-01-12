@@ -21,6 +21,10 @@ pipeline {
             steps {
                 bat 'npx playwright test'
             }
+            
+        stage('Run Playwright Tests (Headed)') {
+            steps {
+                bat 'npx playwright test --headed'
         }
     }
 
