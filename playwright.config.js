@@ -1,25 +1,27 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+
 export default defineConfig({
   timeout: 10 * 60 * 1000, // 10 minutes
   testDir: './tests',
+
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  // white_check_mark: HTML + Allure reporter,
+
   reporter: [
-    ['html', { open: 'never'}],
-    ['allure-playwright']
+    ['html', { open: 'never' }],
+    ['allure-playwright'],
   ],
+
   use: {
-    headless: false,
-    slowMo: 300,
-    viewport: null,
+    headless: true, // ✅ REQUIRED for GitHub Actions
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    trace: 'on'
+    trace: 'on-first-retry',
   },
+
   projects: [
     {
       name: 'chromium',
