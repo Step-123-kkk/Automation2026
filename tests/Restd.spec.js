@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import xlsx from 'xlsx';
-const workbook = xlsx.readFile('./tests/RESTDData/state.xlsx');
+const workbook = xlsx.readFile('./tests/RESTData/state.xlsx');
 const sheet = workbook.Sheets[workbook.SheetNames[0]];
 const data = xlsx.utils.sheet_to_json(sheet);
 test('Excel data based automation', async ({ page }) => {

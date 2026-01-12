@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import xlsx from 'xlsx';
 // -------- Excel Read --------
-const workbook = xlsx.readFile('./tests/RESTDData/state.xlsx');
+const workbook = xlsx.readFile('./tests/RESTData/state.xlsx');
 const sheet = workbook.Sheets[workbook.SheetNames[0]];
 const data = xlsx.utils.sheet_to_json(sheet);
 test('Excel data based automation', async ({ page }) => {
@@ -137,6 +137,7 @@ test('Excel data based automation', async ({ page }) => {
       await page.getByRole('link', { name: 'Booking' }).click();
       await page.waitForTimeout(3000);
       await page.locator("//i[contains(@class,'ion-refresh')]").click();
+      await page.waitForTimeout(6000); 
       await page.locator('#globalSearch').click();
       await page.locator('#globalSearch').press('Control+V');
       await page.locator('#search').first().click();
