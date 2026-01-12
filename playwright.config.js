@@ -24,7 +24,7 @@ export default defineConfig({
 
   /* Shared settings */
   use: {
-    headless: false, // ✅ CI/Jenkins safe
+    headless: true, // ✅ CI/Jenkins safe
     baseURL: 'https://www.landydev.com',
     actionTimeout: 60000,
     navigationTimeout: 40000,
