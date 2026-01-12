@@ -1,0 +1,230 @@
+{
+  "config": {
+    "configFile": "C:\\Automation2026\\playwright.config.js",
+    "rootDir": "C:/Automation2026/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ],
+      [
+        "C:\\Automation2026\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Automation2026/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Automation2026/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.{js,ts}"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "01_AllRestd.spec.js",
+      "file": "01_AllRestd.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Excel data based automation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 230742,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Starting row 41 RiskId: undefined\n"
+                    },
+                    {
+                      "text": "{ row: \u001b[33m41\u001b[39m, RiskId: \u001b[90mundefined\u001b[39m, Status: \u001b[32m'SUCCESS'\u001b[39m }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-01-12T13:08:54.108Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8542398ba2c63441e583-a7a87ebbfbbcf4719b10",
+          "file": "01_AllRestd.spec.js",
+          "line": 10,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "02_Taxrestd.spec.js",
+      "file": "02_Taxrestd.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Excel data based automation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 268361,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Starting row 5 RiskId: undefined\n"
+                    },
+                    {
+                      "text": "{ row: \u001b[33m5\u001b[39m, RiskId: \u001b[90mundefined\u001b[39m, Status: \u001b[32m'SUCCESS'\u001b[39m }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-01-12T13:12:45.819Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a7079813e789ff019283-6473370dac390057f601",
+          "file": "02_Taxrestd.spec.js",
+          "line": 9,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "03_Ncrestd.spec.js",
+      "file": "03_Ncrestd.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Excel data based automation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 237652,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Starting row 1 RiskId: undefined\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": " FAILED ROW 1 | RiskId: undefined locator.check: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//ng2-smart-table//tbody/tr[1]/td[1]//input[@type=\\'checkbox\\']')\u001b[22m\n\n    at \u001b[90mC:\\Automation2026\\\u001b[39mtests\\03_Ncrestd.spec.js:145:97 {\n  name: \u001b[32m'TimeoutError'\u001b[39m,\n  \u001b[32mSymbol(step)\u001b[39m: {\n    location: {\n      file: \u001b[32m'C:\\\\Automation2026\\\\tests\\\\03_Ncrestd.spec.js'\u001b[39m,\n      line: \u001b[33m145\u001b[39m,\n      column: \u001b[33m97\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m\"Check locator('//ng2-smart-table//tbody/tr[1]/td[1]//input[@type=\\\\'checkbox\\\\']')\"\u001b[39m,\n    apiName: \u001b[32m'locator.check'\u001b[39m,\n    params: {\n      selector: \u001b[32m\"//ng2-smart-table//tbody/tr[1]/td[1]//input[@type='checkbox']\"\u001b[39m,\n      strict: \u001b[33mtrue\u001b[39m,\n      timeout: \u001b[33m60000\u001b[39m\n    },\n    group: \u001b[90mundefined\u001b[39m,\n    stepId: \u001b[32m'pw:api@134'\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@134'\u001b[39m,\n      _title: \u001b[32m\"Check locator('//ng2-smart-table//tbody/tr[1]/td[1]//input[@type=\\\\'checkbox\\\\']')\"\u001b[39m,\n      _parentStep: \u001b[90mundefined\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1768224061047\u001b[39m,\n    error: {\n      message: \u001b[32m'TimeoutError: locator.check: Timeout 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('//ng2-smart-table//tbody/tr[1]/td[1]//input[@type=\\\\'checkbox\\\\']')\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'TimeoutError: locator.check: Timeout 60000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('//ng2-smart-table//tbody/tr[1]/td[1]//input[@type=\\\\'checkbox\\\\']')\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Automation2026\\\\tests\\\\03_Ncrestd.spec.js:145:97'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-01-12T13:17:14.311Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8234ae3649e6c7e01261-34317dc7a781f17592c7",
+          "file": "03_Ncrestd.spec.js",
+          "line": 11,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-01-12T13:08:51.045Z",
+    "duration": 745195.164,
+    "expected": 3,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

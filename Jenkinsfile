@@ -1,33 +1,19 @@
 pipeline {
     agent any
-    tools {
-        nodejs 'Node18'
-    }
     stages {
-        stage('Checkout') {
+        stage('Checkout Code') {
             steps {
                 checkout scm
             }
         }
-        stage('Verify Node & NPM') {
-            steps {
-                bat 'node --version'
-                bat 'npm --version'
-            }
-        }
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
-            }
-        }
-        stage('Install Playwright Browsers') {
-            steps {
-                bat 'npx playwright install'
+                sh 'npm install'
             }
         }
         stage('Run Playwright Tests') {
             steps {
-                bat 'npx playwright test'
+                sh 'npx playwright test --workers=1'
             }
         }
     }
@@ -37,6 +23,17 @@ pipeline {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

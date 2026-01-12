@@ -1,22 +1,23 @@
 import { test, expect } from '@playwright/test';
 import xlsx from 'xlsx';
-// -------- Excel Read --------
 const workbook = xlsx.readFile('./tests/RESTData/state.xlsx');
-const sheet = workbook.Sheets[workbook.SheetNames[0]];
+const sheetName = 'restdalllob';
+const sheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(sheet);
+export async function restFlow(page) {
+}
+
 test('Excel data based automation', async ({ page }) => {
-  // -------- Login (once) --------
   await page.goto('https://www.landydev.com/#/auth/login');
   await page.waitForLoadState('networkidle');
   await page.getByRole('textbox', { name: 'Email' }).fill('divya@stepladdersolutions.com');
   await page.getByRole('textbox', { name: 'Password' }).fill('Stepup@123');
   await page.getByRole('button', { name: 'Login' }).click();
   // -------- Loop through Excel rows --------
-  for (let i = 20; i < data.length; i++) {
+  for (let i = 40; i < data.length; i++) {
     const row = data[i];
     console.log(`Starting row ${i + 1} RiskId: ${row.RiskId}`);
     try {
-      // Go to starting page for each row
       await page.goto('https://www.landydev.com/#/pages/riskPolicySearch');
       await page.waitForLoadState('networkidle');
       await page.getByRole('button', { name: '   New Application' }).click();
@@ -29,9 +30,9 @@ test('Excel data based automation', async ({ page }) => {
       await page.getByText('HHL01-A, Herbert H. Landy').click();
       await page.getByRole('textbox', { name: 'Search Firm Name' }).click();
       await page.getByRole('textbox', { name: 'Search Firm Name' }).type(row.FirmName);
-      const locationAL = page.getByRole('textbox', { name: 'Sizing example input' }).first();
-      await locationAL.click();
-      await locationAL.type(row.Location);
+      const location = page.getByRole('textbox', { name: 'Sizing example input' }).first();
+      await location.click();
+      await location.type(row.Location);
       await page.waitForTimeout(3000);
       await page.keyboard.press('ArrowDown');
       await page.keyboard.press('ArrowDown');
@@ -76,8 +77,14 @@ test('Excel data based automation', async ({ page }) => {
       await page.locator('button#save').click();
       await page.locator('button#sendMail > span').click();
       await page.waitForLoadState('networkidle');
-      const fileInput = page.locator('input[type="file"]');
-      await fileInput.setInputFiles('C:/Users/divya/Downloads/WARRNTY_SHEE001_12_17_2025_713.pdf');
+      // const state = await page.locator('#state').inputValue();
+      // if (state === 'NC') {
+      //   const fileInput = page.locator("//input[@accept='application/pdf' and @id='file']");
+      //   await fileInput.setInputFiles('file:///C:/Users/divya/Downloads/WARRNTY_SHEE001_12_17_2025_713.pdf');
+      // const state = await page.locator('#state').inputValue();
+      // await page.getByRole('button', { name: 'Choose File' }).click();
+      // await page.getByRole('button', { name: 'Choose File' }).setInputFiles('file:///C:/Users/divya/Downloads/WARRNTY_SHEE001_12_17_2025_713.pdf');
+      // await page.waitForTimeout(3000);
       await page.locator("div[class='col-sm-6 ng-star-inserted'] td[class='ng-star-inserted']").click();
       await page.waitForTimeout(3000);
       await page.locator('//*[@id="moveToAccounting"]').click();
@@ -121,23 +128,29 @@ test('Excel data based automation', async ({ page }) => {
       await page.getByRole('button', { name: 'Yes' }).click();
       await page.waitForTimeout(3000);
       await page.getByRole('link', { name: 'Accounting' }).click();
-      // await page.getByRole('link', { name: 'Underwriting' }).click();
-      // await page.locator('#globalSearch').click();
-      // await page.locator('#globalSearch').press('Control+V');
-      // await page.locator('#search').first().click();
-      // await page.locator("//tr[@class='ng2-smart-row selected ng-star-inserted']").click();
-      // await page.locator('//nb-tabset//ul/li[1]/a').click();
+      await page.getByRole('link', { name: 'Underwriting' }).click();
+      await page.locator('#globalSearch').click();
+      await page.locator('#globalSearch').press('Control+V');
+      await page.locator('#search').first().click();
+      await page.locator("//tr[@class='ng2-smart-row selected ng-star-inserted']").click();
+      await page.locator('//nb-tabset//ul/li[1]/a').click();
       // ********************************Booking***************************************
-      // await page.locator('nb-accordion-item-header').filter({ hasText: 'Client Information' }).click();
-      // const riskIdInput = page.locator("input[placeholder='Risk Id']");
-      // await riskIdInput.click();
-      // await riskIdInput.press('Control+A');
-      // await riskIdInput.press('Control+C');
+      await page.locator('nb-accordion-item-header').filter({ hasText: 'Client Information' }).click();
+      const riskIdInput = page.locator("input[placeholder='Risk Id']");
+      await riskIdInput.click();
+      await riskIdInput.press('Control+A');
+      await riskIdInput.press('Control+C');
       await page.getByRole('link', { name: 'Accounting' }).click();
       await page.getByRole('link', { name: 'Booking' }).click();
       await page.waitForTimeout(3000);
       await page.locator("//i[contains(@class,'ion-refresh')]").click();
-      await page.waitForTimeout(6000); 
+      await page.waitForTimeout(6000);
+      await page.locator("//i[@class='fa fa-file-pdf']").click();
+      await page.waitForTimeout(6000);
+      await page.locator("//i[contains(@class,'ion-refresh')]").click();
+      await page.waitForTimeout(6000);
+      await page.locator("//i[@class='fa fa-file-pdf']").click();
+      await page.waitForTimeout(6000);
       await page.locator('#globalSearch').click();
       await page.locator('#globalSearch').press('Control+V');
       await page.locator('#search').first().click();
