@@ -1,14 +1,17 @@
 pipeline {
     agent any
 
+    environment {
+        NODE_VERSION = '24.x'
+    }
+
     options {
         timestamps()
-        timeout(time: 30, unit: 'MINUTES')
+        timeout(time: 1, unit: 'HOURS')
     }
 
     stages {
-
-        stage('Checkout Code') {
+        stage('Checkout') {
             steps {
                 checkout scm
             }
@@ -17,26 +20,33 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat '''
-                    node -v
-                    npm -v
                     npm ci
                     npx playwright install
                 '''
             }
         }
 
-        stage('Run Playwright Tests (Headed)') {
+        stage('Run Playwright Tests (Headless)') {
             steps {
                 bat '''
-                    npx playwright test --headed
+                    npx playwright test --workers=4 --reporter=html || exit /b %ERRORLEVEL%
                 '''
+            }
+        }
+
+        stage('Archive Reports') {
+            steps {
+                archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+                junit 'playwright-report/**/*.xml'
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+            echo "Pipeline finished. Check artifacts and test reports."
         }
+        success { echo "✅ Jenkins tests passed!" }
+        failure { echo "❌ Jenkins tests failed!" }
     }
 }
