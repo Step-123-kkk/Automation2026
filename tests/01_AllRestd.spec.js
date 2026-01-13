@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import xlsx from 'xlsx';
-const workbook = xlsx.readFile('./tests/Data/RestdAllState.xlsx');
+const workbook = xlsx.readFile('./tests/RESTData/state.xlsx');
 const sheetName = 'NCState';
 const sheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(sheet);
