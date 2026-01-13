@@ -1,25 +1,26 @@
 import { test, expect } from '@playwright/test';
 import xlsx from 'xlsx';
-// -------- Excel Read --------
-const workbook = xlsx.readFile('./tests/RESTData/state.xlsx');
-const sheetName = 'NcState';
+import path from 'path';
+
+const excelPath = path.resolve(__dirname, './tests/RESTData/state.xlsx');
+const workbook = xlsx.readFile(excelPath);
+const sheetName = 'restdalllob';
 const sheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(sheet);
-export async function ncFlow(page) {
-}
 
 test('Excel data based automation', async ({ page }) => {
-    // -------- Login (once) --------
-    await page.goto('https://www.landydev.com/#/auth/login');
-    await page.waitForLoadState('networkidle');
-    await page.getByRole('textbox', { name: 'Email' }).fill('divya@stepladdersolutions.com');
-    await page.getByRole('textbox', { name: 'Password' }).fill('Stepup@123');
-    await page.getByRole('button', { name: 'Login' }).click();
-    // -------- Loop through Excel rows --------
-    for (let i = 0; i < data.length; i++) {
-        const row = data[i];
-        console.log(`Starting row ${i + 1} RiskId: ${row.RiskId}`);
-        try {
+  console.log(`Total rows from Excel: ${data.length}`);
+
+  await page.goto('https://www.landydev.com/#/auth/login');
+  await page.waitForLoadState('networkidle');
+  await page.getByRole('textbox', { name: 'Email' }).fill('divya@stepladdersolutions.com');
+  await page.getByRole('textbox', { name: 'Password' }).fill('Stepup@123');
+  await page.getByRole('button', { name: 'Login' }).click();
+
+  for (let i = 0; i < data.length; i++) {
+    const row = data[i];
+    console.log(`Starting row ${i + 1} RiskId: ${row.RiskId}`);
+    try {
             // Go to starting page for each row
             await page.goto('https://www.landydev.com/#/pages/riskPolicySearch');
             await page.waitForLoadState('networkidle');
@@ -189,14 +190,13 @@ test('Excel data based automation', async ({ page }) => {
                 RiskId: row.RiskId,
                 Status: 'SUCCESS'
             });
-        } catch (error) {
-            console.error(` FAILED ROW ${i + 1} | RiskId: ${row.RiskId}`, error);
-            await page.screenshot({ path: `row-${i + 1}-error.png` });
-            continue; // move to next Excel row
-        }
-        // small delay between rows
-        await page.waitForTimeout(2000);
+         } catch (error) {
+      console.error(`:x: FAILED ROW ${i + 1} | RiskId: ${row.RiskId}`, error);
+      await page.screenshot({ path: `row-${i + 1}-error.png` });
+      continue;
     }
+    await page.waitForTimeout(2000);
+  }
 });
 
 
