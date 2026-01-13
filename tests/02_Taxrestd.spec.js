@@ -1,45 +1,19 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { test, expect } from '@playwright/test';
 import xlsx from 'xlsx';
-
-// Required for ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Fixed path: relative to the spec file
-const excelPath = path.resolve(__dirname, './RESTData/state.xlsx');
-
-const workbook = xlsx.readFile(excelPath);
-const sheetName = 'restdalllob';
+const workbook = xlsx.readFile('./tests/Data/RestdAllState.xlsx');
+const sheetName = 'TaxState';
 const sheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(sheet);
-
-console.log('Data from Excel:', data);
-
-// Example Playwright test using this data
-import { test } from '@playwright/test';
-
-test.describe('REST Data Tests', () => {
-  data.forEach((row) => {
-    test(`Check ${row.Name}`, async ({ page }) => {
-      console.log('Running test for:', row.Name);
-    });
-  });
-});
 test('Excel data based automation', async ({ page }) => {
-  console.log(`Total rows from Excel: ${data.length}`);
-
-  await page.goto('https://www.landydev.com/#/auth/login');
-  await page.waitForLoadState('networkidle');
-  await page.getByRole('textbox', { name: 'Email' }).fill('divya@stepladdersolutions.com');
-  await page.getByRole('textbox', { name: 'Password' }).fill('Stepup@123');
-  await page.getByRole('button', { name: 'Login' }).click();
-
-  for (let i = 0; i < data.length; i++) {
-    const row = data[i];
-    console.log(`Starting row ${i + 1} RiskId: ${row.RiskId}`);
-    try {
-      // Go to starting page for each row
+    await page.goto('https://www.landydev.com/#/auth/login');
+    await page.waitForLoadState('networkidle');
+    await page.getByRole('textbox', { name: 'Email' }).fill('divya@stepladdersolutions.com');
+    await page.getByRole('textbox', { name: 'Password' }).fill('Stepup@123');
+    await page.getByRole('button', { name: 'Login' }).click();
+    for (let i = 0; i < data.length; i++) {
+        const row = data[i];
+        console.log(`Starting row ${i + 1} RiskId: ${row.RiskId}`);
+        try {
       await page.goto('https://www.landydev.com/#/pages/riskPolicySearch');
       await page.waitForLoadState('networkidle');
       await page.getByRole('button', { name: '   New Application' }).click();
@@ -211,10 +185,11 @@ test('Excel data based automation', async ({ page }) => {
         Status: 'SUCCESS'
       });
     } catch (error) {
-      console.error(`:x: FAILED ROW ${i + 1} | RiskId: ${row.RiskId}`, error);
-      await page.screenshot({ path: `row-${i + 1}-error.png` });
-      continue;
+            console.error(` FAILED ROW ${i + 1} | RiskId: ${row.RiskId}`, error);
+            await page.screenshot({ path: `row-${i + 1}-error.png` });
+            continue; // move to next Excel row
+        }
+        // small delay between rows
+        await page.waitForTimeout(2000);
     }
-    await page.waitForTimeout(2000);
-  }
 });
