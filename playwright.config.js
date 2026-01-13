@@ -1,57 +1,50 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-
 export default defineConfig({
+  timeout: 10 * 60 * 1000, // 10 minutes
   testDir: './tests',
-   testMatch: '**/*.spec.{js,ts}',
-
-  /* Timeouts */
-  timeout: 5 * 60 * 1000,
-  expect: { timeout: 10000 },
-
-  /* Execution control */
-  retries: 0,
-  fullyParallel: false, // IMPORTANT
-  workers: 1,           // REQUIRED for ordered execution
-
-  /* Reporters */
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
+  // :white_check_mark: HTML + Allure reporter
   reporter: [
-    ['list'],
-    ['html', { outputFolder: 'playwright-report', open: 'never' }],
-    ['json', { outputFile: 'report.json' }],
-    ['allure-playwright'],
+    ['html', { open: 'always' }],
+    ['allure-playwright']
   ],
-
-  /* Shared settings */
   use: {
-    headless: false, // ✅ CI/Jenkins safe
-    baseURL: 'https://www.landydev.com',
-    actionTimeout: 60000,
-    navigationTimeout: 40000,
+    headless: false,
+    slowMo: 300,
+    viewport: null,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
-    trace: 'retain-on-failure',
-    viewport: { width: 1366, height: 768 },
-    ignoreHTTPSErrors: true,
-    launchOptions: {
-      slowMo: 150,
-      args: [
-        '--disable-gpu',
-        '--disable-dev-shm-usage',
-        '--disable-background-timer-throttling',
-        '--disable-renderer-backgrounding',
-      ],
-    },
+    trace: 'on'
   },
-
-  /* Browser */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+      },
     },
   ],
-
-  /* Test output */
-  outputDir: 'test-results/',
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

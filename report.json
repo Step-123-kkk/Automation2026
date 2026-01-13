@@ -10,7 +10,9 @@
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
-    "metadata": {},
+    "metadata": {
+      "actualWorkers": 1
+    },
     "preserveOutput": "always",
     "reporter": [
       [
@@ -45,7 +47,9 @@
         "outputDir": "C:/Automation2026/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "chromium",
         "name": "chromium",
         "testDir": "C:/Automation2026/tests",
@@ -64,375 +68,185 @@
     "workers": 1,
     "webServer": null
   },
-  "suites": [],
-  "errors": [
+  "suites": [
     {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+      "title": "01_AllRestd.spec.js",
+      "file": "01_AllRestd.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Excel data based automation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23913,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-01-13T10:29:03.556Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8542398ba2c63441e583-a7a87ebbfbbcf4719b10",
+          "file": "01_AllRestd.spec.js",
+          "line": 7,
+          "column": 1
+        }
+      ]
     },
     {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+      "title": "02_Taxrestd.spec.js",
+      "file": "02_Taxrestd.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Excel data based automation",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 357239,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 300000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 300000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 300000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Automation2026\\tests\\02_Taxrestd.spec.js",
+                        "column": 20,
+                        "line": 193
+                      },
+                      "message": "Error: page.waitForTimeout: Test timeout of 300000ms exceeded.\n\n\u001b[0m \u001b[90m 191 |\u001b[39m         }\n \u001b[90m 192 |\u001b[39m         \u001b[90m// small delay between rows\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 193 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m2000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 194 |\u001b[39m     }\n \u001b[90m 195 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Automation2026\\tests\\02_Taxrestd.spec.js:193:20\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Starting row 1 RiskId: undefined\n"
+                    },
+                    {
+                      "text": "{ row: \u001b[33m1\u001b[39m, RiskId: \u001b[90mundefined\u001b[39m, Status: \u001b[32m'SUCCESS'\u001b[39m }\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-01-13T10:29:32.025Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Automation2026\\test-results\\02_Taxrestd-Excel-data-based-automation-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Automation2026\\test-results\\02_Taxrestd-Excel-data-based-automation-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Automation2026\\test-results\\02_Taxrestd-Excel-data-based-automation-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Automation2026\\test-results\\02_Taxrestd-Excel-data-based-automation-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a7079813e789ff019283-6473370dac390057f601",
+          "file": "02_Taxrestd.spec.js",
+          "line": 7,
+          "column": 1
+        }
+      ]
     },
     {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-    },
-    {
-      "message": "Error: duplicate test title \"REST Data Tests › Check undefined\", first declared in 01_AllRestd.spec.js:24",
-      "location": {
-        "file": "C:\\Automation2026\\tests\\01_AllRestd.spec.js",
-        "line": 24,
-        "column": 5
-      },
-      "snippet": "\u001b[90m   at \u001b[39m01_AllRestd.spec.js:24\n\n\u001b[0m \u001b[90m 22 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'REST Data Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 23 |\u001b[39m   data\u001b[33m.\u001b[39mforEach((row) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     test(\u001b[32m`Check ${row.Name}`\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m       console\u001b[33m.\u001b[39mlog(\u001b[32m'Running test for:'\u001b[39m\u001b[33m,\u001b[39m row\u001b[33m.\u001b[39m\u001b[33mName\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m       \u001b[90m// Your test code here using 'row'\u001b[39m\n \u001b[90m 27 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+      "title": "03_Ncrestd.spec.js",
+      "file": "03_Ncrestd.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Excel data based automation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15326,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-01-13T10:35:51.215Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8234ae3649e6c7e01261-34317dc7a781f17592c7",
+          "file": "03_Ncrestd.spec.js",
+          "line": 7,
+          "column": 1
+        }
+      ]
     }
   ],
+  "errors": [],
   "stats": {
-    "startTime": "2026-01-13T07:23:21.352Z",
-    "duration": 2970.339,
-    "expected": 0,
+    "startTime": "2026-01-13T10:28:56.276Z",
+    "duration": 434753.435,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

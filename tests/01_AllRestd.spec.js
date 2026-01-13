@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import xlsx from 'xlsx';
 const workbook = xlsx.readFile('./tests/RESTData/state.xlsx');
-const sheetName = 'NCState';
+const sheetName = 'restdalllob';
 const sheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(sheet);
 test('Excel data based automation', async ({ page }) => {
@@ -10,7 +10,7 @@ test('Excel data based automation', async ({ page }) => {
   await page.getByRole('textbox', { name: 'Email' }).fill('divya@stepladdersolutions.com');
   await page.getByRole('textbox', { name: 'Password' }).fill('Stepup@123');
   await page.getByRole('button', { name: 'Login' }).click();
-  for (let i = 0; i < data.length; i++) {
+  for (let i = 40; i < data.length; i++) {
     const row = data[i];
     console.log(`Starting row ${i + 1} RiskId: ${row.RiskId}`);
     try {
@@ -73,14 +73,7 @@ test('Excel data based automation', async ({ page }) => {
       await page.locator('button#save').click();
       await page.locator('button#sendMail > span').click();
       await page.waitForLoadState('networkidle');
-      // const state = await page.locator('#state').inputValue();
-      // if (state === 'NC') {
-      //   const fileInput = page.locator("//input[@accept='application/pdf' and @id='file']");
-      //   await fileInput.setInputFiles('file:///C:/Users/divya/Downloads/WARRNTY_SHEE001_12_17_2025_713.pdf');
-      // const state = await page.locator('#state').inputValue();
-      // await page.getByRole('button', { name: 'Choose File' }).click();
-      // await page.getByRole('button', { name: 'Choose File' }).setInputFiles('file:///C:/Users/divya/Downloads/WARRNTY_SHEE001_12_17_2025_713.pdf');
-      // await page.waitForTimeout(3000);
+  
       await page.locator("div[class='col-sm-6 ng-star-inserted'] td[class='ng-star-inserted']").click();
       await page.waitForTimeout(3000);
       await page.locator('//*[@id="moveToAccounting"]').click();
@@ -131,62 +124,62 @@ test('Excel data based automation', async ({ page }) => {
       await page.locator("//tr[@class='ng2-smart-row selected ng-star-inserted']").click();
       await page.locator('//nb-tabset//ul/li[1]/a').click();
       // ********************************Booking***************************************
-      await page.locator('nb-accordion-item-header').filter({ hasText: 'Client Information' }).click();
-      const riskIdInput = page.locator("input[placeholder='Risk Id']");
-      await riskIdInput.click();
-      await riskIdInput.press('Control+A');
-      await riskIdInput.press('Control+C');
-      await page.getByRole('link', { name: 'Accounting' }).click();
-      await page.getByRole('link', { name: 'Booking' }).click();
-      await page.waitForTimeout(3000);
-      await page.locator("//i[contains(@class,'ion-refresh')]").click();
-      await page.waitForTimeout(6000);
-      await page.locator("//i[@class='fa fa-file-pdf']").click();
-      await page.waitForTimeout(6000);
-      await page.locator("//i[contains(@class,'ion-refresh')]").click();
-      await page.waitForTimeout(6000);
-      await page.locator("//i[@class='fa fa-file-pdf']").click();
-      await page.waitForTimeout(6000);
-      await page.locator('#globalSearch').click();
-      await page.locator('#globalSearch').press('Control+V');
-      await page.locator('#search').first().click();
-      await page.waitForTimeout(5000);
-      await page.locator("//ng2-smart-table//tbody/tr[1]/td[1]//input[@type='checkbox']").check();
-      await page.getByRole('button', { name: 'Mark For Booking' }).click();
-      await page.getByRole('button', { name: 'Yes' }).click();
-      await page.getByRole('link').filter({ hasText: /^$/ }).nth(3).click();
-      await page.getByRole('button', { name: 'Yes' }).click();
-      await page.locator("//ng2-smart-table//tbody/tr[1]/td[7]//a").click();
-      await page.locator('#check-0-pending').check();
-      await page.getByRole('button', { name: 'Post' }).click();
-      await page.getByRole('button', { name: 'Yes' }).click();
-      // *****************************************Deposit********************************************
-      await page.getByRole('link', { name: 'Deposit' }).click();
-      await page.locator('#globalSearch').click();
-      await page.locator('#globalSearch').press('Control+V');
-      await page.locator('#search').first().click();
-      await page.locator("//ng2-smart-table//tbody/tr[1]/td[1]//input[@type='checkbox']").check();
-      await page.getByRole('button', { name: 'Mark For Deposit' }).click();
-      await page.getByRole('button', { name: 'Yes' }).click();
-      await page.goto('https://www.landydev.com/#/pages/depositBatchTab/DepositBatch');
-      await page.getByRole('link').filter({ hasText: /^$/ }).nth(3).click();
-      await page.getByRole('button', { name: 'Yes' }).click();
-      await page.locator("//ng2-smart-table//tbody/tr[1]/td[7]//a").click();
-      await page.locator('#check-0-pending').check();
-      await page.getByRole('button', { name: 'Post' }).click();
-      await page.getByRole('button', { name: 'Yes' }).click();
-      await page.getByRole('link', { name: 'Underwriting' }).click();
-      await page.locator('#globalSearch').click();
-      await page.locator('#globalSearch').press('Control+V');
-      await page.locator('#search').first().click();
-      await page.locator("//tr[@class='ng2-smart-row selected ng-star-inserted']").click();
-      await page.locator('//nb-tabset//ul/li[1]/a').click();
-      await page.getByRole('link', { name: 'Payment', exact: true }).click();
-      await page.getByRole('cell').filter({ hasText: /^$/ }).nth(2).click();
-      await page.getByRole('cell').filter({ hasText: /^$/ }).nth(2).click();
-      await page.getByRole('cell').filter({ hasText: /^$/ }).nth(3).click();
-      await page.getByRole('cell').filter({ hasText: /^$/ }).nth(3).click();
-      await page.getByRole('link', { name: 'Accounting' }).click();
+      // await page.locator('nb-accordion-item-header').filter({ hasText: 'Client Information' }).click();
+      // const riskIdInput = page.locator("input[placeholder='Risk Id']");
+      // await riskIdInput.click();
+      // await riskIdInput.press('Control+A');
+      // await riskIdInput.press('Control+C');
+      // await page.getByRole('link', { name: 'Accounting' }).click();
+      // await page.getByRole('link', { name: 'Booking' }).click();
+      // await page.waitForTimeout(3000);
+      // await page.locator("//i[contains(@class,'ion-refresh')]").click();
+      // await page.waitForTimeout(6000);
+      // await page.locator("//i[@class='fa fa-file-pdf']").click();
+      // await page.waitForTimeout(6000);
+      // await page.locator("//i[contains(@class,'ion-refresh')]").click();
+      // await page.waitForTimeout(6000);
+      // await page.locator("//i[@class='fa fa-file-pdf']").click();
+      // await page.waitForTimeout(6000);
+      // await page.locator('#globalSearch').click();
+      // await page.locator('#globalSearch').press('Control+V');
+      // await page.locator('#search').first().click();
+      // await page.waitForTimeout(5000);
+      // await page.locator("//ng2-smart-table//tbody/tr[1]/td[1]//input[@type='checkbox']").check();
+      // await page.getByRole('button', { name: 'Mark For Booking' }).click();
+      // await page.getByRole('button', { name: 'Yes' }).click();
+      // await page.getByRole('link').filter({ hasText: /^$/ }).nth(3).click();
+      // await page.getByRole('button', { name: 'Yes' }).click();
+      // await page.locator("//ng2-smart-table//tbody/tr[1]/td[7]//a").click();
+      // await page.locator('#check-0-pending').check();
+      // await page.getByRole('button', { name: 'Post' }).click();
+      // await page.getByRole('button', { name: 'Yes' }).click();
+      // // *****************************************Deposit********************************************
+      // await page.getByRole('link', { name: 'Deposit' }).click();
+      // await page.locator('#globalSearch').click();
+      // await page.locator('#globalSearch').press('Control+V');
+      // await page.locator('#search').first().click();
+      // await page.locator("//ng2-smart-table//tbody/tr[1]/td[1]//input[@type='checkbox']").check();
+      // await page.getByRole('button', { name: 'Mark For Deposit' }).click();
+      // await page.getByRole('button', { name: 'Yes' }).click();
+      // await page.goto('https://www.landydev.com/#/pages/depositBatchTab/DepositBatch');
+      // await page.getByRole('link').filter({ hasText: /^$/ }).nth(3).click();
+      // await page.getByRole('button', { name: 'Yes' }).click();
+      // await page.locator("//ng2-smart-table//tbody/tr[1]/td[7]//a").click();
+      // await page.locator('#check-0-pending').check();
+      // await page.getByRole('button', { name: 'Post' }).click();
+      // await page.getByRole('button', { name: 'Yes' }).click();
+      // await page.getByRole('link', { name: 'Underwriting' }).click();
+      // await page.locator('#globalSearch').click();
+      // await page.locator('#globalSearch').press('Control+V');
+      // await page.locator('#search').first().click();
+      // await page.locator("//tr[@class='ng2-smart-row selected ng-star-inserted']").click();
+      // await page.locator('//nb-tabset//ul/li[1]/a').click();
+      // await page.getByRole('link', { name: 'Payment', exact: true }).click();
+      // await page.getByRole('cell').filter({ hasText: /^$/ }).nth(2).click();
+      // await page.getByRole('cell').filter({ hasText: /^$/ }).nth(2).click();
+      // await page.getByRole('cell').filter({ hasText: /^$/ }).nth(3).click();
+      // await page.getByRole('cell').filter({ hasText: /^$/ }).nth(3).click();
+      // await page.getByRole('link', { name: 'Accounting' }).click();
       // --- Optional: screenshot for success ---
       await page.screenshot({ path: `row-${i + 1}-success.png` });
       console.log({
