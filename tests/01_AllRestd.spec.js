@@ -1,19 +1,22 @@
 import { test, expect } from '@playwright/test';
 import xlsx from 'xlsx';
-const workbook = xlsx.readFile('./tests/RESTData/state.xlsx');
+import path from 'path';
+
+const excelPath = path.resolve(__dirname, './tests/RESTData/state.xlsx');
+const workbook = xlsx.readFile(excelPath);
 const sheetName = 'restdalllob';
 const sheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(sheet);
-export async function restFlow(page) {
-}
 
 test('Excel data based automation', async ({ page }) => {
+  console.log(`Total rows from Excel: ${data.length}`);
+
   await page.goto('https://www.landydev.com/#/auth/login');
   await page.waitForLoadState('networkidle');
   await page.getByRole('textbox', { name: 'Email' }).fill('divya@stepladdersolutions.com');
   await page.getByRole('textbox', { name: 'Password' }).fill('Stepup@123');
   await page.getByRole('button', { name: 'Login' }).click();
-  // -------- Loop through Excel rows --------
+
   for (let i = 0; i < data.length; i++) {
     const row = data[i];
     console.log(`Starting row ${i + 1} RiskId: ${row.RiskId}`);
@@ -198,12 +201,11 @@ test('Excel data based automation', async ({ page }) => {
         RiskId: row.RiskId,
         Status: 'SUCCESS'
       });
-    } catch (error) {
+     } catch (error) {
       console.error(`:x: FAILED ROW ${i + 1} | RiskId: ${row.RiskId}`, error);
       await page.screenshot({ path: `row-${i + 1}-error.png` });
-      continue; // move to next Excel row
+      continue;
     }
-    // small delay between rows
     await page.waitForTimeout(2000);
   }
 });
