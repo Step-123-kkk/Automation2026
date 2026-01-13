@@ -1,12 +1,18 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+import xlsx from 'xlsx';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 const excelPath = path.resolve(__dirname, './tests/RESTData/state.xlsx');
 const workbook = xlsx.readFile(excelPath);
 const sheetName = 'restdalllob';
 const sheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(sheet);
+
+console.log(data);
+
 
 test('Excel data based automation', async ({ page }) => {
   console.log(`Total rows from Excel: ${data.length}`);
