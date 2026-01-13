@@ -2,16 +2,32 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import xlsx from 'xlsx';
 
+// Required for ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const excelPath = path.resolve(__dirname, './tests/RESTData/state.xlsx');
+// Fixed path: relative to the spec file
+const excelPath = path.resolve(__dirname, './RESTData/state.xlsx');
+
 const workbook = xlsx.readFile(excelPath);
 const sheetName = 'restdalllob';
 const sheet = workbook.Sheets[sheetName];
 const data = xlsx.utils.sheet_to_json(sheet);
 
-console.log(data);
+console.log('Data from Excel:', data);
+
+// Example Playwright test using this data
+import { test } from '@playwright/test';
+
+test.describe('REST Data Tests', () => {
+  data.forEach((row) => {
+    test(`Check ${row.Name}`, async ({ page }) => {
+      console.log('Running test for:', row.Name);
+      // Your test code here using 'row'
+    });
+  });
+});
+
 
 
 test('Excel data based automation', async ({ page }) => {
