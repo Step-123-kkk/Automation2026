@@ -1,7 +1,7 @@
-import { test, expect } from '@playwright/test';
-import xlsx from 'xlsx';
 import path from 'path';
-
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const excelPath = path.resolve(__dirname, './tests/RESTData/state.xlsx');
 const workbook = xlsx.readFile(excelPath);
 const sheetName = 'restdalllob';
