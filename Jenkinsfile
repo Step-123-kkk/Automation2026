@@ -29,7 +29,7 @@ pipeline {
         stage('Run Playwright Tests (Headless)') {
             steps {
                 bat '''
-                    npx playwright test --workers=4 --reporter=html || exit /b %ERRORLEVEL%
+                    npx playwright test --headless=false--workers=4 --reporter=html || exit /b %ERRORLEVEL%
                 '''
             }
         }
